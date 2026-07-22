@@ -50,20 +50,26 @@ function BarcodeScanner() {
   }, [showCamera]);
 
   const handleScanWithBarcode = async (barcodeValue) => {
-    if (!barcodeValue.trim()) {
+    // Trim and clean the barcode
+    const cleanBarcode = barcodeValue.trim();
+    
+    if (!cleanBarcode) {
       setError('Please enter a barcode');
       return;
     }
 
+    console.log('Scanning barcode:', cleanBarcode, '| Length:', cleanBarcode.length);
+    
     setLoading(true);
     setError('');
 
     try {
-      const response = await scanProduct(barcodeValue);
+      const response = await scanProduct(cleanBarcode);
       setProduct(response.data);
-      sessionStorage.setItem('scannedBarcode', barcodeValue);
+      sessionStorage.setItem('scannedBarcode', cleanBarcode);
     } catch (err) {
-      setError(err.response?.data?.message || 'Product not found. Please try another barcode.');
+      console.error('Scan error:', err.response?.data);
+      setError(err.response?.data?.message || `Product not found for barcode: ${cleanBarcode}`);
       setProduct(null);
     } finally {
       setLoading(false);
