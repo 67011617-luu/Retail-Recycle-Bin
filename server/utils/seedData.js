@@ -20,9 +20,9 @@ const products = [
     points: 15
   },
   {
-    barcode: '885012300003',
-    name: 'Glass Water Bottle',
-    material: 'Glass',
+    barcode: '8850051006207',
+    name: 'Plastic Water Bottle',
+    material: 'Plastic',
     category: 'Beverage',
     points: 20
   },

@@ -16,6 +16,7 @@ const corsOptions = {
     ? [
         'https://retail-recycle-bin.vercel.app',
         'https://smart-waste-management.vercel.app',
+        'https://retail-ticket-system.onrender.com'
         // Add your custom domain here if you have one
       ]
     : ['http://localhost:3000', 'http://localhost:5173'],
