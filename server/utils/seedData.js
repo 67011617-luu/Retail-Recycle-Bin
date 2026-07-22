@@ -20,9 +20,9 @@ const products = [
     points: 15
   },
   {
-    barcode: '8850051006207',
-    name: 'Plastic Water Bottle',
-    material: 'Plastic',
+    barcode: '8850388546452',
+    name: 'Orange Juice',
+    material: 'Paperboard',
     category: 'Beverage',
     points: 20
   },
