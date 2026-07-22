@@ -91,7 +91,8 @@ function BarcodeScanner() {
       'Glass': 'badge-glass',
       'Metal': 'badge-metal',
       'Paper': 'badge-paper',
-      'Cardboard': 'badge-paper'
+      'Cardboard': 'badge-paper',
+      'Paperboard': 'badge-paperboard'
     };
     return materialMap[material] || 'badge-plastic';
   };

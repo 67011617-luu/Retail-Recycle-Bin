@@ -154,6 +154,11 @@ p {
   color: #9f1239;
 }
 
+.badge-paperboard {
+  background: #fef3c7;
+  color: #92400e;
+}
+
 .points-display {
   font-size: 48px;
   font-weight: 700;

@@ -15,7 +15,7 @@ const productSchema = new mongoose.Schema({
   material: {
     type: String,
     required: [true, 'Please provide material type'],
-    enum: ['Plastic', 'Glass', 'Metal', 'Paper', 'Cardboard', 'Mixed'],
+    enum: ['Plastic', 'Glass', 'Metal', 'Paper', 'Cardboard', 'Paperboard', 'Mixed'],
     trim: true
   },
   category: {
