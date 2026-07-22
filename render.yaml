@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: smart-waste-backend
+    runtime: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
+    plan: free
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false  # Set manually in Render dashboard for security
+      - key: PORT
+        value: 5001
+    healthCheckPath: /api/health
